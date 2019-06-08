@@ -38,7 +38,7 @@ total_price = 0
 selected_ids = []
 
 while True:
-    selected_id = input("Please input a product identifier: ") # string data type
+    selected_id = input("Please input a product identifier, or 'DONE' if there are no more items: ") # string data type
     # "DONE"
     if selected_id == "DONE":
         break
