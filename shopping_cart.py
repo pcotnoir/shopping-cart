@@ -69,6 +69,9 @@ print("Cotnoir Grocery Store")
 print("-----------------------------------") 
 
 # A grocery store phone number and/or website URL and/or address of choice
+print("Web: www.cotnoirgroceries.com")
+print("Phone: 1.800.675.7245")
+
 # The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2019-06-06 11:31 AM)
 # The name and price of each shopping cart item, price being formatted as US dollars and cents (e.g. $1.50)
 # The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices
