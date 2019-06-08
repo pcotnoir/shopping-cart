@@ -64,6 +64,10 @@ for selected_id in selected_ids:
 print("THE TOTAL PRICE IS: " + str(total_price)) #TODO format as USD
 
 # A grocery store name of your choice
+print("-----------------------------------")
+print("Cotnoir Grocery Store")
+print("-----------------------------------") 
+
 # A grocery store phone number and/or website URL and/or address of choice
 # The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2019-06-06 11:31 AM)
 # The name and price of each shopping cart item, price being formatted as US dollars and cents (e.g. $1.50)
