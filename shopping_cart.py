@@ -25,9 +25,6 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-# print(products)
-# pprint(products)
-
 # TODO: write some Python code here to produce the desired output
 
 #
@@ -36,35 +33,20 @@ products = [
 
 total_price = 0
 selected_ids = []
-# allowed = set("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "DONE")
 
 while True:
     selected_id = input("Please input a product identifier, or 'DONE' if there are no more items: ") # string data type
     # "DONE"
-    
     if selected_id == "DONE":
         break
-    else:
-        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        # matching_product = matching_products[0]
-        # total_price = total_price + matching_product["price"]
-        # print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-        selected_ids.append(selected_id)
+    elif int(selected_id) not in range (1,21):
+            print("Hey, are you sure that product identifier is correct? Please try again!")
+    elif not selected_id.isdigit():
+            print("Hey, are you sure that product identifier is correct? Please try again!")
+    else:  
+            selected_ids.append(selected_id)     
 
-
-#
-# INFO DISPLAY/OUTPUT
-#
-
-# print("SHOPPING CART ITEM IDENTIFIERS INCLUDE: ", selected_ids)
-
-# for selected_id in selected_ids:
-        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        # matching_product = matching_products[0]
-        # total_price = total_price + matching_product["price"]
-        # print("+ " + matching_product["name"] + " " + str(matching_product["price"]))
-
-# print("THE TOTAL PRICE IS: " + str(total_price)) #TODO format as USD
+# print("THE TOTAL PRICE IS: " + str(total_price)) #format as USD
 
 # A grocery store name of your choice
 print("-----------------------------------")
@@ -89,6 +71,7 @@ for selected_id in selected_ids:
         matching_product = matching_products[0]
         total_price = total_price + matching_product["price"]
         print("+ " + matching_product["name"] + " " + "($" + str(matching_product["price"]) + ")")
+
 print("-----------------------------------") 
 
 # The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices
@@ -96,8 +79,8 @@ print("-----------------------------------")
 # The total amount owed, formatted as US dollars and cents (e.g. $4.89), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items
 
 Tax = total_price*0.08875
-Total_cost = (total_price/2) + Tax
-print("Subtotal: " + "$" + str(total_price/2))
+Total_cost = (total_price) + Tax
+print("Subtotal: " + "$" + str(total_price))
 print("Plus NYC Sales Tax (8.875%): " + "$" + str(Tax))
 print("Total: " + "$" + str(Total_cost))
 print("-----------------------------------") 
