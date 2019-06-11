@@ -39,9 +39,9 @@ while True:
     # "DONE"
     if selected_id == "DONE":
         break
-    elif int(selected_id) not in range (1,21):
-            print("Hey, are you sure that product identifier is correct? Please try again!")
     elif not selected_id.isdigit():
+            print("Hey, are you sure that product identifier is correct? Please try again!")
+    elif int(selected_id) not in range (1,21):
             print("Hey, are you sure that product identifier is correct? Please try again!")
     else:  
             selected_ids.append(selected_id)     
