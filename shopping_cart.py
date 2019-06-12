@@ -84,17 +84,11 @@ def moneyformat(Tax):
     return '${:,.2f}'.format(Tax) 
 FormatTax= moneyformat(Tax)
 
-#round(Tax,2)
-#'${:,.2f}'.format(Tax)
-#float("{0:.2f}".format(Tax))
 Total_cost = (total_price) + Tax
 def totalcostformat(Total_cost):
     return '${:,.2f}'.format(Total_cost)
 FormatTotalCost = totalcostformat(Total_cost)
-#round(Total_cost,2)
-#'${:,.2f}'.format(Total_cost)
-#float("{0:.2f}".format(Total_cost))
-Rounded_Cost = total_price + round(Tax,2)
+
 print("Subtotal: " + "$" + str(total_price))
 print("Plus NYC Sales Tax (8.875%): " + str(FormatTax))
 print("Total: " + str(FormatTotalCost))
