@@ -78,11 +78,26 @@ print("-----------------------------------")
 # The amount of tax owed (e.g. $0.39), calculated by multiplying the total cost by a New York City sales tax rate of 8.75% (for the purposes of this project, groceries are not exempt from sales tax)
 # The total amount owed, formatted as US dollars and cents (e.g. $4.89), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items
 
+
 Tax = total_price*0.08875
+def moneyformat(Tax):
+    return '${:,.2f}'.format(Tax) 
+FormatTax= moneyformat(Tax)
+
+#round(Tax,2)
+#'${:,.2f}'.format(Tax)
+#float("{0:.2f}".format(Tax))
 Total_cost = (total_price) + Tax
+def totalcostformat(Total_cost):
+    return '${:,.2f}'.format(Total_cost)
+FormatTotalCost = totalcostformat(Total_cost)
+#round(Total_cost,2)
+#'${:,.2f}'.format(Total_cost)
+#float("{0:.2f}".format(Total_cost))
+Rounded_Cost = total_price + round(Tax,2)
 print("Subtotal: " + "$" + str(total_price))
-print("Plus NYC Sales Tax (8.875%): " + "$" + str(Tax))
-print("Total: " + "$" + str(Total_cost))
+print("Plus NYC Sales Tax (8.875%): " + str(FormatTax))
+print("Total: " + str(FormatTotalCost))
 print("-----------------------------------") 
 
 # A friendly message thanking the customer and/or encouraging the customer to shop again
